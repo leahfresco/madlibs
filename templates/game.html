@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <title>Mad Libs Game </title>
+</head>
+<body>
+    Please enter your name and choose attributes from the menu!
+    <form action="/madlib">
+        Name: <input type="text" name="person">
+        <div>
+            Color:<select name="color">
+                {% for c in color %}
+                <option value={{c}}>{{c}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            Noun:
+            {% for c in noun %}
+            <input type="checkbox" name="noun" value={{c}}>{{c}}
+            {% endfor %}
+        </div>
+        <div>
+            Adjective:<select name="adjective">
+                {% for c in adjective %}
+                <option value={{c}}>{{c}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit" value="Madlib it!!!">
+    </form>
+</body>
+</html>

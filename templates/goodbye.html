@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <title>Goodbye!</title>
+</head>
+<body>
+
+<h1>Goodbye!</h1>
+<p> You will be missed! :( </p>
+<div>
+    <form action="/check">
+    Noun:
+        {% for c in noun %}
+        <input type="checkbox" name="noun" value={{c}}>{{c}}
+        {% endfor %}
+    <input type="submit">
+    </form>
+</div>
+</body>
+</html>
