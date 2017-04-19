@@ -1,0 +1,42 @@
+h1 { 
+    margin-top: 10px;
+    display: block;
+    width: 219px;
+    height: 87px;
+    float: left;
+    font-family: "tablet-gothic-condensed", "arial narrow", arial, verdana, sans-serif;
+    text-indent: 100%;
+    white-space: nowrap;
+    }
+div {
+    width: 300px;
+    height: 40px;
+    background: limegreen;
+    border: hotpink 10px;
+}
+body { 
+    font: 75% georgia, sans-serif;
+    line-height: 1.88889;
+    color: #555753; 
+    background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right; 
+    margin: 0; 
+    padding: 0;
+    }
+
+.button {
+    background-color: white; /* Green */
+    border: black 5px;
+    color: limegreen;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}

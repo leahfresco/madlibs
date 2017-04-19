@@ -64,17 +64,19 @@ def check_data():
     print nouns
     return render_template("check.html", noun=nouns)
 
-@app.route('/madlib')
+@app.route('/madlib', methods=["POST"])
 def show_madlib():
     """Greet user with compliment."""
 
     mad = choice(["madlib.html", "madlib2.html"])
-    color = request.args.get("color")
-    person = request.args.get("person")
-    adjective = request.args.get("adjective")
-    nouns = request.args.getlist("noun")
+
+    color = request.form.get("color")
+    adjective = request.form.get("adjective")
+    nouns = request.form.getlist("noun")
+    person = request.form.get("person")
+
+    noun2 = choice(nouns)
     verb = choice(VERBY)
-    noun2 = choice(request.args.getlist("noun"))
 
     random_noun = ", and ".join(nouns)
     return render_template(mad,
